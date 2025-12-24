@@ -1,0 +1,16 @@
+class Solution {
+public:
+    int reverse(int n) {
+        int rev{};
+
+        while (n) {
+            rev = rev * 10 + n % 10;
+            n /= 10;
+        }
+
+        return rev;
+    }
+    int mirrorDistance(int n) {
+        return abs(n - reverse(n));
+    }
+};
